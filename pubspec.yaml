@@ -37,6 +37,8 @@ dependencies:
   cupertino_icons: ^1.0.2
 
 dev_dependencies:
+  husky: 0.1.6
+  lint_staged: 0.4.2
   flutter_test:
     sdk: flutter
 
@@ -49,6 +51,9 @@ dev_dependencies:
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
+
+lint_staged:
+  'lib/**.dart': flutter test . && dart format -l 120 && dart analyze --fatal-infos --fatal-warnings
 
 # The following section is specific to Flutter packages.
 flutter:
